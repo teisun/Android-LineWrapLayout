@@ -66,9 +66,9 @@ public class LineWrapLayout extends ViewGroup {
 			if (child.getVisibility() != GONE) {
 				final LayoutParams lp = child.getLayoutParams();
 				//算出子View宽的MeasureSpec值
-				int wSpec = MeasureSpec.makeMeasureSpec(lp.width, MeasureSpec.AT_MOST);
+				int wSpec = MeasureSpec.makeMeasureSpec(lp.width, MeasureSpec.EXACTLY);
 				//算出子View高的MeasureSpec值
-				int hSpec = MeasureSpec.makeMeasureSpec(lp.height, MeasureSpec.AT_MOST);
+				int hSpec = MeasureSpec.makeMeasureSpec(lp.height, MeasureSpec.EXACTLY);
 				//让子View记住自己宽高的MeasureSpec值,子View的
 	            //onMeasure(int widthMeasureSpec,int heightMeasureSpec)
 	            //函数传入的就是这里算出来的这两个值
